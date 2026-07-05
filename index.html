@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India - Watch TV Shows Online</title>
+    <link rel="stylesheet" href="style.css"> <!-- Make sure this filename is correct! -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- SECTION 1: HERO & NAVBAR -->
+    <div class="main">
+        <div class="box1"></div> <!-- Dark overlay for readability -->
+
+       <nav>
+    <img src="logo.png" alt="Netflix">
+    
+    <!-- Group these two together -->
+    <div class="nav-right">
+        <div class="lang-btn">
+            <i data-lucide="languages"></i>
+            <select>
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+            </select>
+            <i data-lucide="chevron-down" class="chevron"></i>
+        </div>
+        <button class="but2">Sign In</button>
+    </div>
+</nav>
+
+        <section class="hero">
+            <h1>Unlimited movies, </h1>
+            <h1>Shows and more</h1>
+            <h2>Starts at ₹149. Cancel at any time.</h2>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+
+            <div class="email-signup">
+                <input type="email" placeholder="Email address">
+                <button class="btn-get-started">Get Started</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- SECTION 2: THE RED CURVE -->
+    <div class="curved-section"></div>
+
+    <!-- SECTION 3: TRENDING MOVIES -->
+    <main>
+        <h2 class="section-title">Trending Now</h2>
+        <div class="movie-container">
+            <!-- These classes (div1, div2, etc.) match your CSS for the images -->
+            <div class="movie-card div1"></div>
+            <div class="movie-card div2"></div>
+            <div class="movie-card div4"></div>
+            <div class="movie-card div5"></div>
+            <div class="movie-card div6"></div>
+        </div>
+
+        <!-- SECTION 4: REASONS TO JOIN -->
+        <h2 class="section-title">More Reasons To join</h2>
+        <div class="merits-grid">
+            <div class="merit-card">
+                <h4>Enjoy on your TV</h4>
+                <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+            </div>
+            <div class="merit-card">
+                <h4>Download your shows to watch offline</h4>
+                <p>Save your favourites easily and always have something to watch.</p>
+            </div>
+            <div class="merit-card">
+                <h4>Watch everywhere</h4>
+                <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+            </div>
+            <div class="merit-card">
+                <h4>Create profiles for kids</h4>
+                <p>Send kids on adventures with their favourite characters in a space made just for them — free with
+                    your membership.</p>
+            </div>
+        </div>
+
+        <!-- SECTION 5: FAQ ACCORDION -->
+        <div class="faq-container">
+            <h2 class="section-title" style="padding:0; margin-bottom: 25px; text-align: center;">Frequently Asked
+                Questions</h2>
+
+            <div class="faq-row">
+                <p>What is Netflix?</p>
+                <span>+</span>
+            </div>
+            <div class="faq-row">
+                <p>How much does Netflix cost?</p>
+                <span>+</span>
+            </div>
+            <div class="faq-row">
+                <p>Where can I watch?</p>
+                <span>+</span>
+            </div>
+            <div class="faq-row">
+                <p>How do I cancel?</p>
+                <span>+</span>
+            </div>
+            <div class="faq-row">
+                <p>What can I watch on Netflix?</p>
+                <span>+</span>
+            </div>
+
+            <!-- Bottom Email Signup -->
+            <div class="hero" style="height: auto; margin-top: 50px;">
+                <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                <div class="email-signup">
+                    <input type="email" placeholder="Email address">
+                    <button class="btn-get-started">Get Started ></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- SECTION 6: FOOTER -->
+    <footer>
+        <p>Questions? Call 000-800-919-1743</p>
+        <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Media Center</a></li>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Ways to Watch</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Cookie Preferences</a></li>
+            <li><a href="#">Corporate Information</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Speed Test</a></li>
+            <li><a href="#">Legal Notices</a></li>
+            <li><a href="#">Only on Netflix</a></li>
+        </ul>
+
+       <div class="lang-bt">
+            <i data-lucide="languages"></i>
+            <select>
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+            </select>
+            <i data-lucide="chevron-down" class="chevron"></i>
+        </div>
+    </div>
+        <p style="margin-top: 30px;">Netflix India</p>
+    </footer>
+
+</body>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons(); // This line transforms the <i> into an icon
+</script>
+</html>

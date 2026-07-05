@@ -1,0 +1,208 @@
+:root {
+    --netflix-red: #e50914;
+    --hover-red: #b20710;
+    --dark-bg: #000000;
+    --card-gradient: linear-gradient(149deg, #192247 0%, #210e17 99%);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { background-color: var(--dark-bg); 
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+    color: white; 
+    overflow-x: hidden; }
+
+/* HERO */
+.main {
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Keeps the blur from leaking outside the box */
+    background-color: black; /* The color that shows through the opacity */
+}
+
+/* THE HERO IMAGE LAYER */
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Your Image */
+    background-image: url("background.webp");
+    background-size: cover;
+    background-position: center;
+    
+    /* 1. OPACITY (0.5 makes it 50% see-through) */
+    opacity: 0.8; 
+    
+    /* 2. BLUR (Adjust px to make it more or less blurry) */
+    filter: blur(4px); 
+    
+    /* Scale it slightly so the edges of the blur don't look white/clean */
+    transform: scale(1.1); 
+    
+    z-index: 1; 
+}
+
+/* THE DARK GRADIENT OVERLAY (To make text pop) */
+.main .box1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradient from dark edges to transparent middle */
+    background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.8) 100%);
+    z-index: 2; 
+}
+
+/* Ensure Nav and Hero content stay on top */
+nav, .hero {
+    position: relative;
+    z-index: 10; 
+}
+
+nav { max-width: 1200px; 
+    margin: auto; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    height: 80px; 
+    padding: 0 40px; 
+    position: relative; 
+    z-index: 10; }
+nav img { width: 150px; }
+
+.hero { height: calc(80vh - 80px);
+     display: flex; 
+     align-items: center; 
+     justify-content: center; 
+     flex-direction: column; 
+     text-align: center; 
+     padding: 0 20px; 
+     z-index: 5; 
+     position: relative; }
+.hero h1 { font-size: 3rem; 
+    font-weight: 900; 
+    margin-bottom: 15px; }
+.email-signup { display: flex; 
+    gap: 10px; 
+    flex-wrap: wrap; 
+    justify-content: center; }
+
+input[type="email"] { height: 55px; 
+    width: 400px; 
+    background: rgba(0,0,0,0.4); 
+    border: 1px solid gray; 
+    color: white; 
+    border-radius: 4px; 
+    padding: 0 20px; }
+    
+.btn-get-started { height: 55px; 
+    padding: 0 30px; 
+    background: var(--netflix-red); 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    font-size: 1.4rem; 
+    font-weight: bold; 
+    cursor: pointer; }
+
+/* CURVE */
+.curved-section {
+    position: relative;
+    width: 100%;
+    height: 100px; /* The height of the curve area */
+    margin-top: -60px; /* Pulls it up into the background image */
+    overflow: hidden; /* Hide the parts of the circle outside the screen */
+    z-index: 10;
+}
+
+.curved-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Create a massive circle much wider than the screen */
+    width: 150%; 
+    height: 300%; /* Height is large so the curve is shallow */
+    
+    background: black;
+    
+    /* THE ICONIC RED LINE */
+    border-top: 4px solid #e50914; 
+    
+    /* This creates the hill shape */
+    border-radius: 50% 50% 0 0; 
+    
+    /* Optional: Adds that subtle blue glow from your screenshot */
+    box-shadow: inset 0 20px 100px rgba(20, 45, 146, 0.61); 
+}
+
+/* MOVIES */
+.section-title { max-width: 1200px; 
+    margin: 40px auto 20px; 
+    padding: 0 40px; 
+    font-size: 1.5rem; }
+.movie-container { display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: auto; 
+    padding: 0 40px; }
+.movie-card { flex: 1; 
+    height: 250px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: transform 0.4s ease; 
+    background-size: cover; }
+.movie-card:hover { transform: scale(1.1); z-index: 15; }
+
+/* Image Links */
+.div1 { background-image: url("box1_img.jpg"); }
+.div2 { background-image: url("box2_img.avif"); }
+.div4 { background-image: url("box4_img.avif"); }
+.div5 { background-image: url("box5_img.webp"); }
+.div6 { background-image: url("box6_img.webp"); }
+
+/* REASONS & FAQ */
+.merits-grid { display: grid; 
+    grid-template-columns: repeat(auto-fit, 
+    minmax(250px, 1fr)); 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: auto; 
+    padding: 0 40px; }
+.merit-card { background: var(--card-gradient); 
+    padding: 30px; 
+    border-radius: 12px; 
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0.1); }
+.faq-container { max-width: 800px; 
+    margin: 60px auto; 
+    padding: 0 20px; }
+.faq-row { background: #2d2d2d; 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 20px 30px; 
+    margin-bottom: 8px; 
+    cursor: pointer; }
+.faq-row:hover { background: #454545; }
+
+/* FOOTER */
+footer { max-width: 1000px;
+     margin: 80px auto; 
+     padding: 0 40px; 
+     color: gray; }
+footer ul { display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 15px; 
+    list-style: none; 
+    margin-top: 30px; }
+footer a { color: gray; font-size: 0.8rem; }
