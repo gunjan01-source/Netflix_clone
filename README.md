@@ -64,9 +64,10 @@ Netflix_clone/
 
 ## 📸 Preview
 
-<img width="3200" height="2000" alt="Screenshot 2026-07-05 104633" src="https://github.com/user-attachments/assets/f976fffe-3ba5-47b9-9786-76f3a0afcdfc" />
-<img width="3200" height="2000" alt="Screenshot 2026-07-05 104648" src="https://github.com/user-attachments/assets/9cb85981-cc6f-41e0-8abd-b697b3a7c66f" />
-<img width="3200" height="2000" alt="Screenshot 2026-07-05 104702" src="https://github.com/user-attachments/assets/fbaa3e3e-5c8b-4f8d-99c1-0f6f4db2f23f" />
+<img width="3200" height="1730" alt="Screenshot 2026-07-05 104633" src="https://github.com/user-attachments/assets/23005332-3ae6-476e-84fc-9b0af8dd2fc3" />
+<img width="3200" height="1724" alt="Screenshot 2026-07-05 104648" src="https://github.com/user-attachments/assets/228aaac6-545a-4bda-a012-455412e26c53" />
+<img width="3197" height="1716" alt="Screenshot 2026-07-05 104702" src="https://github.com/user-attachments/assets/2a1571ed-1507-4c6f-9cc0-59d957448b54" />
+
 
 
 ## 📌 How to Run
